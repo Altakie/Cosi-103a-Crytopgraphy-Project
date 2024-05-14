@@ -4,7 +4,4 @@ A simple code breaker referenced in the historical portion, looking at the power
 
 > Written in java
 
-Run by using navigating to the [**bin**](./bin) directory and running the command _**java main.Network**_
-
-> _cd bin_  
-> _java main.Network_
+Run through the main method in the class, demonstrations provided and discussed in the paper
