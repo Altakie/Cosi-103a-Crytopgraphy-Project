@@ -1,5 +1,6 @@
 package main;
 
+import java.util.Random;
 import java.util.Scanner;
 
 /**
@@ -11,12 +12,15 @@ import java.util.Scanner;
 public class Network {
 
     private static int upperBound = 31;
-    private static int publicVar = 7;
+    private static int publicVar;
 
     /**
      * @param args
      */
     public static void main(String[] args) {
+	Random rand = new Random();
+	publicVar = rand.nextInt(2, upperBound - 1);
+
 	// TODO Auto-generated method stub
 	System.out.println("Hello! What kind of simulation would you like to run today?");
 	System.out.println("Press 0 to exit the simulation");
@@ -70,7 +74,6 @@ public class Network {
 	e2.establishSharedSecret(e1.getOtherVar());
 	logMessage(String.format("%d", e1.getOtherVar()));
 	System.out.println(String.format("Connections between %s and %s established!", e1.getName(), e2.getName()));
-//	System.out.println(String.format("Shared secret: %s", e1.getSharedSecret()));
     }
 
     /**

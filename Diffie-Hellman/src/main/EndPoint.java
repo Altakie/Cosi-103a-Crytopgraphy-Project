@@ -38,7 +38,7 @@ public class EndPoint {
 
 	// Generates a random number between 2 and 2 less than the upper bound
 	// (inclusive)
-	privateKey = rand.nextInt(upperBound - 3) + 2;
+	privateKey = rand.nextInt(2, upperBound - 1);
     }
 
     /**
