@@ -10,7 +10,7 @@ import java.util.Scanner;
  */
 public class Network {
 
-    private static int upperBound = 26;
+    private static int upperBound = 31;
     private static int publicVar = 7;
 
     /**

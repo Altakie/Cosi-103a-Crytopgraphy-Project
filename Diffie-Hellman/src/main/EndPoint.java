@@ -67,7 +67,7 @@ public class EndPoint {
      * @param OtherVar - the variable shared by the other side of the exchange
      */
     public void establishSharedSecret(int OtherVar) {
-	sharedSecrets.add((OtherVar ^ privateKey) % upperBound);
+	sharedSecrets.add(((OtherVar ^ privateKey) % upperBound) % 26);
     }
 
     /**
@@ -90,7 +90,7 @@ public class EndPoint {
      * @return - decrypted message
      */
     protected String receiveEncryptedMessage(String message, int sharedSecret) {
-	return rotN(upperBound - sharedSecrets.get(sharedSecret), message);
+	return rotN(26 - sharedSecrets.get(sharedSecret), message);
     }
 
     /**
