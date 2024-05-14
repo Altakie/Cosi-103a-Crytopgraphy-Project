@@ -1,16 +1,10 @@
-/**
- * Artem Lavrov
- * artemlavrov@brandeis.edu
- * Date
- * PA#
- * Description: 
- * Known Bugs: 
- */
 package main;
 
 import java.util.Scanner;
 
 /**
+ * A simulation of a network over which a diffie-hellman key exchange is made
+ * 
  * @author Artem Lavrov
  *
  */
@@ -55,6 +49,11 @@ public class Network {
 
     }
 
+    /**
+     * Logs a message that is visible to users on the network
+     * 
+     * @param message - message to log
+     */
     private static void logMessage(String message) {
 	System.out.println("What users on the network see: " + message);
     }
@@ -102,6 +101,9 @@ public class Network {
 	}
     }
 
+    /**
+     * Simulates a man in the middle attack on a diffie-hellman key exchange
+     */
     private static void simulateManInTheMiddle() {
 	EndPoint alice = new EndPoint("Alice", publicVar, upperBound);
 	EndPoint bob = new EndPoint("Bob", publicVar, upperBound);

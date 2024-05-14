@@ -1,11 +1,3 @@
-/**
- * Artem Lavrov
- * artemlavrov@brandeis.edu
- * Date
- * PA#
- * Description: 
- * Known Bugs: 
- */
 package main;
 
 /**
